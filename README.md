@@ -1,7 +1,7 @@
 # Product Summary Dataset
 
 ## Overview
-This dataset is designed for product summarization and consists of detailed product descriptions. It is structured to assist with tasks like text summarization, feature extraction, and product analysis.
+This dataset is designed for supervised machine learning tasks, including regression and classification. Users are encouraged to train models on this dataset and evaluate performance using appropriate metrics.
 
 ## Dataset Files
 - **📂 product_summarize_dataset.csv** – Original dataset containing detailed product descriptions.
@@ -20,18 +20,14 @@ This dataset is designed for product summarization and consists of detailed prod
 3. **Dataset Splitting**
    - The dataset was split into 80% training and 20% testing for model evaluation.
 
-## Recommended Models
-For supervised learning tasks such as regression and classification, consider the following models:
-
-### Regression
-- **Linear Regression** (ideal for predicting product prices or scores)
-- **Random Forest Regressor** (robust for complex data relationships)
-- **XGBoost Regressor** (recommended for performance optimization)
-
-### Classification
-- **Logistic Regression** (for binary or multi-class classification)
-- **Random Forest Classifier** (highly effective with minimal tuning)
-- **XGBoost Classifier** (excellent for high-dimensional data)
+## Recommended Approach
+1. Train a supervised model using `product_train.csv`.
+2. Evaluate the model using `product_test.csv`.
+3. Report the following metrics:
+   - **Accuracy** (for classification tasks)
+   - **F1 Score** (for imbalanced classification tasks)
+   - **R-squared (R²)** (for regression tasks)
+   - **Mean Squared Error (MSE)** (for regression tasks)
 
 ## Column Descriptions
 | Column Name | Description |
@@ -42,11 +38,9 @@ For supervised learning tasks such as regression and classification, consider th
 | Summary | The summarized description generated for each product. |
 
 ## Usage
-- The `product_summarize_dataset.csv` can be used for text summarization tasks or exploratory data analysis.
-- The train-test datasets (`product_train.csv` and `product_test.csv`) are structured to facilitate machine learning model training and evaluation.
+- Train your supervised learning model using `product_train.csv`.
+- Evaluate your model's performance on `product_test.csv` and report accuracy and other metrics.
 
 ## Next Steps
-- Enhance the summarization model using transformer models like BART or T5.
-- Perform additional feature engineering using NLP techniques.
-- Evaluate model performance using metrics such as ROUGE, BLEU, and METEOR.
-
+- Experiment with various supervised learning models for optimal performance.
+- Compare model performance using accuracy, R², F1 Score, or MSE as required.
